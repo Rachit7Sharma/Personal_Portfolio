@@ -27,24 +27,32 @@ export const Contact = () => {
     });
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    emailjs.sendForm(
-      'service_z1077jp',    
-      'template_nqvm4jz',   
-      form.current,
-      'aIRiGOb1ZQWtbLXac'     
-    )
-    .then(() => {
-      setButtonText("Send");
+    try {
+      await emailjs.sendForm(
+        'service_z1077jp',
+        'template_vikpzg8',
+        form.current,
+        'aIRiGOb1ZQWtbLXac'
+      );
+
+      await emailjs.sendForm(
+        'service_z1077jp',
+        'template_nqvm4jz',
+        form.current,
+        'aIRiGOb1ZQWtbLXac'
+      );
+
       setFormDetails(formInitialDetails);
-      setStatus({ success: true, message: 'Message sent successfully!' });
-    }, () => {
+      setStatus({ success: true, message: '✅ Message sent successfully!' });
+    } catch (error) {
+      setStatus({ success: false, message: '❌ Something went wrong, please try again later.' });
+    } finally {
       setButtonText("Send");
-      setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-    });
+    }
   };
 
   return (
@@ -79,7 +87,7 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} className="px-1">
                       <textarea rows="6" name="message" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required></textarea>
-                      <button type="submit"><span>{buttonText}</span></button>
+                      <button type="submit" disabled={buttonText === "Sending..."}><span>{buttonText}</span></button>
                     </Col>
                     {
                       status.message &&
@@ -95,5 +103,5 @@ export const Contact = () => {
         </Row>
       </Container>
     </section>
-  )
+  );
 }
