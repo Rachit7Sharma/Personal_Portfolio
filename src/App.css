@@ -814,3 +814,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .icon-default {
   filter: none !important;
 }
+
+
+.success {
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.danger {
+  color: #f44336;
+  font-weight: 600;
+  margin-top: 10px;
+}
