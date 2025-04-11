@@ -41,14 +41,19 @@ export const Footer = () => {
         <Row className="align-items-center">
           <MailchimpForm />
           <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
-            <div className="social-icon">
-              <a href="https://www.linkedin.com/in/rachit-sharma-748379284"><img src={navIcon1} alt="LinkedIn" /></a>
-              <a href="https://github.com/Rachit7Sharma"><img src={navIcon2} alt="GitHub" /></a>
-              <a href="https://leetcode.com/u/Rachit7Sharma/"><img src={navIcon3} alt="LeetCode" /></a>
-            </div>
+          <div className="social-icon">
+            <a href="https://www.linkedin.com/in/rachit-sharma-748379284" target="_blank" rel="noreferrer">
+              <img src={navIcon1} alt="LinkedIn" className="icon-default" />
+            </a>
+            <a href="https://github.com/Rachit7Sharma" target="_blank" rel="noreferrer">
+              <img src={navIcon2} alt="GitHub" className="icon-invert" />
+            </a>
+            <a href="https://leetcode.com/u/Rachit7Sharma/" target="_blank" rel="noreferrer">
+              <img src={navIcon3} alt="LeetCode" className="icon-invert" />
+            </a>
+          </div>
             <p>Copyright 2025. All Rights Reserved</p>
           </Col>
         </Row>
