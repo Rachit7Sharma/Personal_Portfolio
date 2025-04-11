@@ -866,3 +866,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0;
   line-height: 1.4;
 }
+
+.icon-placeholder {
+  height: 100%;
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  border-radius: 30px;
+}
+
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  height: 100%;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 30px;
+}
+
+.icon-placeholder svg {
+  font-size: 80px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.proj-imgbx:hover .icon-placeholder svg {
+  transform: scale(1.1);
+}
