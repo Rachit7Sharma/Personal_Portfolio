@@ -1,6 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
+  "homepage": "https://Rachit7Sharma.github.io/Personal_Portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
