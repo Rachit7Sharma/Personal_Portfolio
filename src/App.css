@@ -827,3 +827,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 600;
   margin-top: 10px;
 }
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px 20px;
+  border-radius: 16px;
+  border-left: 4px solid #AA367C;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.skill-card h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  color: #B8B8B8;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4;
+}
