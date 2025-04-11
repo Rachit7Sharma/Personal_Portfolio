@@ -26,12 +26,21 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
   "start": "react-scripts start",
   "build": "react-scripts build",
   "test": "react-scripts test",
   "eject": "react-scripts eject",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
+=======
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+>>>>>>> Updated LinkedIn and LeetCode icons
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3"
   }
 }
