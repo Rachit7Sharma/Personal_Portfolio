@@ -39,9 +39,9 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <MailchimpForm />
+          {/* <MailchimpForm />
           <Col size={12} sm={6}>
-          </Col>
+          </Col> */}
           <Col size={12} sm={6} className="text-center text-sm-end">
           <div className="social-icon">
             <a href="https://www.linkedin.com/in/rachit-sharma-748379284" target="_blank" rel="noreferrer">
