@@ -116,11 +116,17 @@ export const NavBar = () => {
               <Nav.Link href="#education" className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')}>Education</Nav.Link>
             </Nav>
             <span className="navbar-text">
-              <div className="social-icon">
-                <a href="https://www.linkedin.com/in/rachit-sharma-748379284"><img src={navIcon1} alt="LinkedIn" /></a>
-                <a href="https://github.com/Rachit7Sharma"><img src={navIcon2} alt="GitHub" /></a>
-                <a href="https://leetcode.com/u/Rachit7Sharma/"><img src={navIcon3} alt="LeetCode" /></a>
-              </div>
+            <div className="social-icon">
+              <a href="https://www.linkedin.com/in/rachit-sharma-748379284" target="_blank" rel="noreferrer">
+                <img src={navIcon1} alt="LinkedIn" className="icon-default" />
+              </a>
+              <a href="https://github.com/Rachit7Sharma" target="_blank" rel="noreferrer">
+                <img src={navIcon2} alt="GitHub" className="icon-invert" />
+              </a>
+              <a href="https://leetcode.com/u/Rachit7Sharma/" target="_blank" rel="noreferrer">
+                <img src={navIcon3} alt="LeetCode" className="icon-invert" />
+              </a>
+            </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
               </HashLink>
