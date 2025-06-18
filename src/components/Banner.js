@@ -101,7 +101,9 @@ export const Banner = () => {
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
@@ -123,6 +125,14 @@ export const Banner = () => {
     }
   }
 
+  const handleConnect = () => {
+    window.open(
+      'https://www.linkedin.com/in/rachit-sharma-748379284',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -132,9 +142,22 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Rachit`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer", "Data Analyst", "Robotics Engineer" ]'><span className="wrap">{text}</span></span></h1>
-                <p>I’m a passionate problem-solver and tech enthusiast, building robust software systems and autonomous robotics solutions. Explore my journey through data, code, and innovation.</p>
-                <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>
+                  {`Hi! I'm Rachit`}{" "}
+                  <span
+                    className="txt-rotate"
+                    dataPeriod="1000"
+                    data-rotate='[ "Software Developer", "Data Analyst", "Robotics Engineer" ]'
+                  >
+                    <span className="wrap">{text}</span>
+                  </span>
+                </h1>
+                <p>
+                  I’m a passionate problem-solver and tech enthusiast, building robust software systems and autonomous robotics solutions. Explore my journey through data, code, and innovation.
+                </p>
+                <button onClick={handleConnect}>
+                  Let’s Connect <ArrowRightCircle size={25} />
+                </button>
               </div>}
             </TrackVisibility>
           </Col>
@@ -149,5 +172,5 @@ export const Banner = () => {
         </Row>
       </Container>
     </section>
-  )
+  );
 }
