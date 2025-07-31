@@ -10,7 +10,7 @@ export const CodingProfiles = () => {
             <div className="section-header">
               <h2><CodeSlash size={26} /> Competitive Coding</h2>
             </div>
-            <p>I consistently work on my data structures and algorithms by solving challenges online:</p>
+            <p>My Competitive Programming Profiles can be found below :</p>
             <ul>
               <li><a href="https://leetcode.com/u/Rachit7Sharma/" target="_blank">LeetCode Rating - 1624</a></li>
               <li><a href="https://www.codechef.com/users/rachit7sharma" target="_blank">CodeChef – 2★</a></li>
